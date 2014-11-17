@@ -1,6 +1,11 @@
 Zend\Cache Service Provider
 ===========================
 
+[![Build Status](https://travis-ci.org/devsdmf/silex-zend-cache-provider.svg?branch=develop)](https://travis-ci.org/devsdmf/silex-zend-cache-provider) 
+[![Latest Stable Version](https://poser.pugx.org/devsdmf/silex-zend-cache-provider/v/stable.svg)](https://packagist.org/packages/devsdmf/silex-zend-cache-provider) 
+[![Total Downloads](https://poser.pugx.org/devsdmf/silex-zend-cache-provider/downloads.png)](https://packagist.org/packages/devsdmf/silex-zend-cache-provider) 
+[![License](https://poser.pugx.org/devsdmf/silex-zend-cache-provider/license.png)](https://packagist.org/packages/devsdmf/silex-zend-cache-provider)
+
 This is a service provider prepared to integrate Zend\Cache library into Silex framework.
 
 Installation
