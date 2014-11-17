@@ -1,7 +1,7 @@
 Zend\Cache Service Provider
 ===========================
 
-This library is a service provider prepared to integrate Zend\Cache library into Silex framework.
+This is a service provider prepared to integrate Zend\Cache library into Silex framework.
 
 Installation
 ------------
@@ -11,7 +11,7 @@ Add the following dependency to *composer.json* file of your project:
 ```json
 {
     "require": {
-        "devsdmf/silex-zend-cache-provider": "*"
+        "devsdmf/silex-zend-cache-provider": "v1.0.0"
     }
 }
 ```
