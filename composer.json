@@ -1,0 +1,26 @@
+{
+    "name": "devsdmf/silex-zend-cache-provider",
+    "description": "A Silex service provider for Zend Cache library",
+    "keywords": ["silex","zend","cache","service","provider"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Mendes de Freitas",
+            "email": "devsdmf@gmail.com"
+        }
+    ],
+    "require": {
+        "zendframework/zend-cache": "2.3.*"
+    },
+    "require-dev": {
+        "silex\/silex": "~1.2",
+        "phpunit\/phpunit": "4.2.*",
+        "fabpot/php-cs-fixer": "0.5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    },
+    "php": ">=5.3.23"
+}
