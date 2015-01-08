@@ -13,7 +13,7 @@
         "zendframework/zend-cache": "2.3.*"
     },
     "require-dev": {
-        "silex\/silex": "~1.2",
+        "silex\/silex": "~2.0@dev",
         "phpunit\/phpunit": "4.2.*",
         "fabpot/php-cs-fixer": "0.5.*"
     },

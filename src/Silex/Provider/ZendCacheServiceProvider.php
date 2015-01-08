@@ -2,8 +2,8 @@
 
 namespace Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Zend\Cache\StorageFactory;
 
 /**
@@ -17,17 +17,17 @@ use Zend\Cache\StorageFactory;
  * @namespace Silex\Provider
  * @author Lucas Mendes de Freitas <devsdmf@gmail.com>
  * @copyright Copyright 2010-2014 (c) devSDMF Software Development Inc.
- * 
+ *
  */
 class ZendCacheServiceProvider implements ServiceProviderInterface
 {
     /**
      * Register Cache service in application dependency injection container
      *
-     * @param Application $app
-     * @see \Silex\ServiceProviderInterface::register()
+     * @param Container $app
+     * @see \Pimple\ServiceProviderInterface::register()
      */
-    public function register(Application $app)
+    public function register(Container $app)
     {
         # Defining default cache options
         $app['cache.default_options'] = array(
@@ -49,7 +49,7 @@ class ZendCacheServiceProvider implements ServiceProviderInterface
         );
 
         # Initializing Service
-        $app['cache'] = $app->share(function ($app) {
+        $app['cache'] = function ($app) {
             # Verifying if user options is defined or use default options
             $app['cache.options'] = (isset($app['cache.options'])) ? $app['cache.options'] : $app['cache.default_options'];
 
@@ -60,14 +60,6 @@ class ZendCacheServiceProvider implements ServiceProviderInterface
             $cache->setOptions($app['cache.options']['zendcache']['options']);
 
             return $cache;
-        });
+        };
     }
-
-    /**
-     * Bootstrap the application
-     *
-     * @param Application $app
-     * @see \Silex\ServiceProviderInterface::boot()
-     */
-    public function boot(Application $app) {}
 }
