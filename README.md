@@ -17,7 +17,7 @@ Add the following dependency to *composer.json* file of your project:
 ```json
 {
     "require": {
-        "devsdmf/silex-zend-cache-provider": "1.0.0"
+        "devsdmf/silex-zend-cache-provider": "1.1.0"
     }
 }
 ```
